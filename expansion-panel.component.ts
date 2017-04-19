@@ -68,14 +68,13 @@ export class MdlExpansionPanelHeaderSecondaryContentComponent { }
   },
   animations: [
     trigger('isExpanded', [
-      state('true', style({ height: '85px', overflow: 'auto' })),
+      state('true', style({ minHeight: '85px', overflow: 'auto' })),
       state('false', style({ height: '0'})),
 	    transition('true => false', [
-		    style({ overflow: 'hidden' }),
-	  	  animate('300ms ease-in', style({ height: '0' })),
+	  	  animate('250ms ease-in', style({ height: '0' })),
 	    ]),
 	    transition('false => true', [
-	  	  animate('300ms ease-out', style({ height: '85px' })),
+	  	  animate('250ms ease-out', style({ minHeight: '85px' })),
 	    ])
     ])
   ]
